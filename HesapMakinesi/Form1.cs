@@ -25,6 +25,38 @@ namespace HesapMakinesi
         {
 
         }
+        private void button16_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = ""; // textBox1 içeriðini temizle
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            // Buraya yüzde iþlemi yapýlacak kodlarý ekleyin
+            // Örneðin, textBox1.Text üzerinde yüzde iþlemi yapabilirsiniz
+            // Örnek bir yüzde iþlemi:
+            if (double.TryParse(textBox1.Text, out double value))
+            {
+                double result = value / 100;
+                textBox1.Text = result.ToString();
+            }
+        }
+       
+        private void button19_Click(object sender, EventArgs e)
+
+        {
+            if (!string.IsNullOrEmpty(textBox1.Text))
+            {
+                double sayi = double.Parse(textBox1.Text);
+                double sonuc = sayi * sayi;
+                textBox1.Text = sonuc.ToString();
+            }
+        }
+
+
+
+
+
 
         private void button0_Click(object sender, EventArgs e)
         {
